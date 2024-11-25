@@ -15,6 +15,9 @@
 #' @examples \dontrun{myBivarNorm(df = micro, alpha = 0.05, contour = 0.5)}
 myBivarNorm <- function(df, alpha = 0.05, contour = 0.5) {
 
+  # Kill Current Graphics
+  grDevices::graphics.off()
+
   # n & p
   n <- dim(df)[1]
   p <- dim(df)[2]
@@ -54,7 +57,7 @@ myBivarNorm <- function(df, alpha = 0.05, contour = 0.5) {
   dsq <- sort(v)
   qchi <- stats::qchisq((j-0.5)/n, p)
   resM <- ifelse(pctOut != stats::qchisq(1-contour, p), "Likely Non-Normal", "Likely Normal")
-  resMult <- data.frame(Test=resM, PctOut=pctOut, Contour=contour)
+  resMult <- data.frame(Test=resM, PctOut=pctOut, Contour=contour, n=n)
 
   # Plots
   grDevices::windows()
