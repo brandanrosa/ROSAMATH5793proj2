@@ -5,7 +5,7 @@
 #' @param df data frame
 #' @param Sim are the values similarities or differences
 #'
-#' @return a plot of three dendrograms for the three linages and a list of the heights
+#' @return a plot of three dendrograms for the three linkages and a list of the heights
 #' @export
 #'
 #' @examples \dontrun{myClusterF(df = LANGUAGES)}
