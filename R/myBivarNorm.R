@@ -62,10 +62,10 @@ myBivarNorm <- function(df, alpha = 0.05, contour = 0.5) {
   # Plots
   grDevices::windows()
   graphics::par(mfrow=c(3,2))
-  rcompanion::plotNormalHistogram(x1)
-  rcompanion::plotNormalHistogram(x2)
-  EnvStats::qqPlot(x1, add.line = TRUE, line.col = "blue", line.lwd = 2)
-  EnvStats::qqPlot(x2, add.line = TRUE, line.col = "blue", line.lwd = 2)
+  plotNormalHistogram(x1)
+  plotNormalHistogram(x2)
+  qqPlot(x1, add.line = TRUE, line.col = "blue", line.lwd = 2)
+  qqPlot(x2, add.line = TRUE, line.col = "blue", line.lwd = 2)
   graphics::mtext("Univariate/Bivariate Normality Plots", side = 3, line = -2, outer = TRUE, cex = 1.5, col = 'blue')
   plot(qchi, dsq, main = "ChiSq Plot",
        xlab = "ChiSq Quantiles",
