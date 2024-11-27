@@ -60,7 +60,7 @@ myBivarNorm <- function(df, alpha = 0.05, contour = 0.5) {
   resMult <- data.frame(Test=resM, PctOut=pctOut, Contour=contour, n=n)
 
   # Plots
-  grDevices::windows()
+  # grDevices::windows()
   graphics::par(mfrow=c(3,2))
   plotNormalHistogram(x1)
   plotNormalHistogram(x2)
