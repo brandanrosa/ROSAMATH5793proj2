@@ -12,7 +12,7 @@ myClusterF(df, Sim = FALSE)
 \item{Sim}{are the values similarities or differences}
 }
 \value{
-a plot of three dendrograms for the three linages and a list of the heights
+a plot of three dendrograms for the three linkages and a list of the heights
 }
 \description{
 A function which produces dendrogram clusterings for Single, Complete, and Average Linkages
